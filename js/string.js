@@ -1,5 +1,5 @@
 let hr = mn = sg = ms = "0" + 0;
-let iniciarTiempo;
+let iniciarTiempo = "0" + 0;
 const botonIniciar = document.querySelector(".iniciar");
 const botonDetener = document.querySelector(".detener");
 const botonReiniciar = document.querySelector(".reiniciar");
@@ -13,7 +13,6 @@ function iniciar() {
     iniciarTiempo = setInterval(() => {
         ms++;
         ms = ms < 10 ? "0" + ms : ms;
-
         if (ms == 100) {
             sg++;
             sg = sg < 10 ? "0" + sg : sg;
@@ -49,7 +48,7 @@ function reiniciar() {
 }
 
 function ingresarValor() {
-    document.querySelector('.milisegundo').innerHTML = ms;
+    document.querySelector('.milisegundos').innerHTML = ms;
     document.querySelector('.segundo').innerHTML = sg;
     document.querySelector('.minuto').innerHTML = mn;
     document.querySelector('.hora').innerHTML = hr;
